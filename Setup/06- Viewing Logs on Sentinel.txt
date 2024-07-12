@@ -1,0 +1,24 @@
+﻿Viewing Logs on Sentinel 
+
+
+1. Setting up parameters on Sentinel 
+
+- Now it is time to go to “Sentinel” through the search box at the top
+- Go to the “Workbooks” tab and click on “Add a New Workbook”
+- There will be two default widgets set. Click on “Edit”. 
+- Erase those widget. 
+- Click on “Add a query” and for the query code, put in the same kql code that was put for the custom logs. (Ref. KQL_sentinel.jpg).  Remember, the name of the Log File goes first, then underneath it goes the kql code
+- Under “Visualize” drop down menu, choose “Map” and now a visual form of where the attacks are originating from will be seen.
+
+
+2. Filtering information on Sentinel 
+ 
+- Now set the parameters by latitude and longitude and the map will show where an attack is coming from. 
+- Save this by clicking on the “Save” button at the top. 
+- Turn on “Auto Refresh” to about every 5 minutes. 
+
+
+3. Viewing All The Information on Sentinel 
+
+- Let the script run from the virtual machine and the map will keep populating with attacks.. 
+- It can show what hostname they are trying to log in as, what general location, what time they tried it, and so forth.

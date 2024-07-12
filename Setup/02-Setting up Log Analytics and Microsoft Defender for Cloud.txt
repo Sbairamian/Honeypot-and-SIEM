@@ -1,0 +1,27 @@
+﻿Setting up Log Analytics and Microsoft Defender for Cloud
+
+
+1. Setting up Log Analytics Workspaces 
+
+- After the Virtual Machine is done being created, go to the search bar and search “Log Analytics Workspaces”.
+- The purpose of this is to create logs that will display where the attacks are coming from.
+- Click on “Create log analytics workspace”
+- For resource group, click on the resource group that was created.  Give the log a name.
+- Click on “Review and Create”.  And then click "Create".
+
+
+2. Setting up Microsoft Defender for Cloud
+
+- Go to search and type “Microsoft Defender for Cloud”.
+- On the getting started menu, there will be the log that was created in log analytics. Click on it. (Ref. Defender_For_Cloud.jpg)
+- Turn on the "Foundational CSPM" and "Servers" and click on the “Save” button.
+- Go to Environmental Settings → Data collection.
+- Click on "All Events" and click "Save".
+
+
+3. Linking Log with Virtual Machine
+
+- Go back to Log Analytics Workspace.
+- Click on the log that was created.
+- Go under “Classic” and choose “Virtual Machines”.
+- Click on the virtual machine that was created and click “Connect” (This will take a while).

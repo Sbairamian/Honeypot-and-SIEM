@@ -1,0 +1,18 @@
+﻿Filtering Out Custom Categories 
+
+
+1. Looking at the Logs
+
+- Go to the Logs tab now.  
+- Under the Query, type the name of the custom log that was created (Ref. Log_Query.jpg)
+- Click "Run" and the logs that were created on the virtual machine will show up (If this doesn’t show up, you will need to wait about 15 minutes for it to sync)
+- At the top, there will be a search query that can be made to look up log files.
+- Type in the name of the log that was made in the table tab.
+- Click “Run” and the logs that were created in the virtual machine will show up.
+
+
+2. Setting up Custom Boundaries
+
+- Now it’s time to set custom boundaries so that the data is easier to read.
+- Go to the website https://github.com/AnastasiaCoskuner/Sentinel-Lab/blob/main/query_log and copy and paste the KQL code (ref KQL_Query.jpg)
+- The data will now be separated into different categories such as longitude, latitude, source host, etc.

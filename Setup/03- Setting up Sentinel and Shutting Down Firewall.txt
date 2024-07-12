@@ -1,0 +1,20 @@
+﻿Setting up Sentinel and Shutting Down Firewall
+
+
+1. Activating Sentinel and Logging into Virtual Machine 
+
+- Search up “Sentinel” in the search area.  Click on “Create” in Microsoft Sentinel.
+- Click on the log analytics workspace that was created and then click on the “Add” that is on the bottom of the page (This will take about one minute)
+- Go to the search bar and search up “Virtual Machine” and click on the VM that was created.
+- There will be a public IP address. Copy it.
+- Go to the Windows menu and click on RDP.  
+- Put in the IP address and sign in.
+
+
+2. Taking down the Firewall
+
+- It will ask to install Privacy Settings such as location services.  Say no to all.
+- It is time to take down the firewall so that it allows attackers to come on.
+- Under the search bar of windows, type wf.msc 
+- It will take you to the Windows Defender Firewall.  Click on "Windows Defender Firewall Properties".
+- Under Domain, Private, and Public tab click on “Disable the firewall".

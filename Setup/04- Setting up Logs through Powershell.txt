@@ -1,0 +1,33 @@
+﻿Setting up Logs through Powershell 
+
+
+1. Download PowerShell Script
+
+- Go to this website- GitHub - joshmadakor1/Sentinel-Lab
+- Click on the “Custom_Security_Log_Exporter.ps1”
+- Open Powershell ISE and copy and paste the script into Powershell ISE.
+- Log on to ipgeolocation.io 
+- Create an account. And it will give an API key.
+- Copy that API key and paste it where it says API key on Powershell ISE (Ref. API_Key.jpg)
+
+
+2. Run Powershell Script and Access Data
+
+- Run the script. Let it run for about 30 seconds or so.  Stop the script.
+- It will make a failed_rdp report text document.  This can be found in the C:\ Drive.  If it doesn’t show, make sure to show hidden items (Ref. Hidden_Files.jpg)
+- When the document is opened, it will show a log of  all failed log-on attempts and their geographic data.
+- Copy all of that data and save it on a notepad file on the local computer.  This will be needed later.
+
+
+3. Create custom log in Log Analytics Workspace
+
+- Go back to Azure.  Under search, look up “Log Analytics Workspace”.
+- Click on the log that was named earlier.
+- Click on tables under the settings tab. Click on “Create” and click on “New Custom Log (MMA-based)”
+
+
+4. Configuring the Custom Log 
+
+- Under Sample, choose the file that was saved on the local computer.  This gives it a sample file to train log analytics on what to look for.
+- Click Next.  It will ask for a Collection Path.  Under Type, Choose Windows.  Under path, put in “C:\ProgramData\failed_rdp.log”. That is where the log is stored on the Virtual Machine.
+- Click “Next”.  Under Details, give the log a custom name. Click “Next” and create the custom log.
